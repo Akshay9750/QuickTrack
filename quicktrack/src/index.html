@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickTrack</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="/assets/images/iconimage.jpg" />
+  </head>
+  <body>
+    <div id="header">
+      <span>QuickTrack</span>
+      <button id="goToAnalytics">Go to Analytics</button>
+    </div>
+
+    <div id="startingDiv">
+      <input
+        type="text"
+        name=""
+        id="workTask"
+        placeholder="What are you working on?"
+      />
+      <div id="timerContainer">
+        <h2 id="timer">00:00:00</h2>
+      </div>
+      <div id="buttonContainer">
+        <button id="track">Start</button>
+        <button id="addManual">Add Manual Task</button>
+      </div>
+    </div>
+
+    <div id="message">
+      <span id="messageText"></span>
+      <button id="okButton">OK</button>
+    </div>
+
+    <div id="trackingStarted"></div>
+
+    <div id="manualForm">
+      <input type="text" id="manualTask" placeholder="Task Name" />
+      <input type="datetime-local" id="manualStartTime" />
+      <input type="datetime-local" id="manualEndTime" />
+      <div id="manualButtonContainer">
+        <button id="addManualButton">Add</button>
+        <button id="cancelManualButton">Cancel</button>
+      </div>
+    </div>
+
+    <div id="pastTrackings"></div>
+
+    <div id="analyticsSection">
+      <select id="viewSelector">
+        <option value="day">Day</option>
+        <option value="week" selected>Week</option>
+        <option value="month">Month</option>
+      </select>
+      <canvas id="trackingChart" width="400" height="200"></canvas>
+    </div>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
